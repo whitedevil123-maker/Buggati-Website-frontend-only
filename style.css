@@ -1,0 +1,740 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech&family=Underdog&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Roboto+Slab:wght@100..900&family=Share+Tech&family=Underdog&display=swap');
+/* font-family: "Share Tech", sans-serif;
+font-family: "Underdog", system-ui;
+font-family: "Roboto Slab", serif;
+font-family: "Cal Sans", sans-serif;
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1A1A1D;
+    overflow-x: hidden;
+}
+
+
+.navbar {
+    width: 100%;
+    padding: 10px 20px;
+    /* border: 2px solid red; */
+    background-color: #222831;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-wrap: wrap; */
+}
+
+.logo {
+    width: 10rem;
+    /* border: 2px solid red; */
+
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav-items {
+    width: 65%;
+    /* border: 2px solid red; */
+}
+
+.nav-items .nav-ul {
+    display: flex;
+    /* display: none; */
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+}
+
+.nav-items .nav-ul li {
+    list-style: none;
+    /* border: 2px solid red; */
+}
+
+.nav-items .nav-ul>li>a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 10px 15px;
+    transition: all 0.5s ease;
+    font-family: "Share Tech", sans-serif;
+
+}
+
+.nav-items ul li a:hover {
+    color: black;
+    background-color: white;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown:hover .dropdown-ul {
+    display: block;
+    position: absolute;
+    top: 100%;
+    background-color: #222831;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+
+
+.dropdown:hover .dropdown-ul li a {
+    display: block;
+    text-align: center;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.dropdown:hover .dropdown-ul li a:hover {
+    color: black;
+}
+
+.dropdown-ul {
+    display: none;
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    gap: 10px;
+    border: 3px solid white;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.hamburger-menu:hover {
+    background-color: white;
+    border: 3px solid rgb(0, 0, 0);
+
+}
+
+.hamburger-menu:hover hr {
+    background-color: black;
+
+}
+
+.hamburger-menu hr {
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    border: none;
+    transition: all 0.3s ease;
+    position: relative;
+
+}
+
+.click {
+    position: relative;
+    height: 50px;
+    transition: all 0.3 ease;
+}
+
+.click hr:first-child {
+    transform: rotate(45deg);
+    width: 100%;
+    position: absolute;
+
+}
+
+.click hr:nth-child(2) {
+    display: none;
+}
+
+.click hr:last-child {
+    transform: rotate(-45deg);
+    width: 100%;
+    position: absolute;
+
+}
+
+
+/* Above navbar */
+/* ---Main section from here--- */
+
+.hero {
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+    /* overflow: hidden; */
+    position: relative;
+}
+
+.hero video {
+    width: 200%;
+    height: 200%;
+    /* border: 2px solid red; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    filter: brightness(0.8);
+}
+
+.hero .content {
+    padding: 30px;
+    width: 100%;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+
+}
+
+
+.hero .content h2 {
+    color: rgb(255, 238, 0);
+    font-size: 4.5rem;
+    font-family: "Roboto Slab", serif;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.hero .content h2 span {
+    color: white;
+    animation: glow 5s infinite;
+}
+
+@keyframes glow {
+    50%{
+        text-shadow: 1px 1px 10px white;
+
+    }
+}
+
+
+
+.hero .content p {
+    color: white;
+    font-family: "Roboto Slab", serif;
+    font-size: 2rem;
+}
+
+.slider{
+    color: white;
+    font-size: 5rem;
+    font-family: "Share Tech", sans-serif;
+    width: 100%;
+    overflow: hidden;
+    padding: 10px;
+    background-color: #222831;
+
+}
+
+.slider .slider-track{
+    display: flex;
+    animation: line-animation 10s infinite linear;
+    white-space: nowrap;
+
+}
+
+.slider p{
+    padding-right: 100px;
+    
+
+}
+
+.slider .slider-track:hover{
+    animation-play-state: paused;
+}
+
+/* image view */
+.image-view{
+    width: 100%;
+    padding: 50px;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+    /* position: relative; */
+    /* border: 2px solid rgb(86, 235, 0); */
+}
+
+.image-view .image-container{
+    width: 400px;
+    
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+    max-width: 600px;
+    flex-grow: 1;
+}
+
+.image-view .image-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+.image-view .image-container .content{
+    position: absolute;
+border: 5px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.726);
+    font-family: "Roboto Slab", serif;
+    font-size: 3rem;
+    text-align: center;
+    z-index: 5;
+    opacity: 0;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    padding: 10px;
+    
+}       
+
+
+
+.image-view .image-container:hover .content{
+    opacity: 1;
+}
+
+@keyframes line-animation {
+    0% {
+        transform: translateX(0%);
+      }
+    100%{
+    transform: translateX(-100%);
+
+    }
+}
+
+.records{
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.records video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    filter: blur(10px) brightness(0.5);
+}
+
+.records .content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 2;
+    
+    color: white;
+    padding: 0 40px;
+    text-align: center
+    /* margin: 20px; */
+    /* border: 2px solid red; */
+}
+
+.design-h2-rec{
+    font-size: 6rem;
+    font-family :"Roboto Slab", serif;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    
+}
+
+.records .content p{
+    font-size: 2rem;
+    font-family: sans-serif;
+}
+
+/* engine section from here--- */
+
+.engines{
+    width: 100%;
+    padding: 20px;
+    /* border: 2px solid red; */
+}
+
+.engines h1{
+    text-align: center;
+    color: white;
+    font-size: 5rem;
+    font-family: "Underdog", system-ui;
+    text-decoration: underline;
+    margin-top: 100px;
+}
+
+.engines .engine-containers{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    width: 100%;
+    /* border: 2px solid rgb(115, 255, 0); */
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.engines .engine-containers .engine-items{
+    /* border: 2px solid rgb(255, 0, 0); */
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    /* height: 300px; */
+}
+
+.engines .engine-containers .engine-items .img-det{
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    z-index: 3;
+    font-size: 1.2rem;
+    color: white;
+    background-color: black;
+    padding: 10px;
+    display: none;
+    
+}
+
+.engines .engine-containers .engine-items img:hover{
+    cursor: pointer;
+    transform: scale(1.005);
+}
+
+.engines .engine-containers .engine-items img:hover + .img-det{
+    display: block;
+}
+
+.engines .engine-containers .engine-items img{
+    width: 100%;
+    height: 400px;
+    transition: 0.3s ease;
+    /* object-fit: cover; */
+}
+
+
+
+
+
+.engines .engine-containers .engine-items .content{
+    color: white;
+    padding: 20px;
+    background-color: rgba(119, 119, 119, 0.205);
+}
+
+.engines .engine-containers .engine-items .content h3{
+    font-size: 3rem;
+    font-family :"Roboto Slab", serif;
+    margin-bottom: 10px;
+}
+
+.engines .engine-containers .engine-items .content p{
+    font-size: 1.3rem;
+    font-family: sans-serif,system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-bottom: 10px;
+}
+
+.overlay{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    
+    /* margin: auto; */
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: rgba(255, 255, 255, 0.219);
+    z-index: 99;
+    justify-content: center;
+      align-items: center;
+    backdrop-filter: blur(10px);
+}
+
+#popup{
+    /* position: fixed; */
+    /* top: 50%;
+    left: 50%; */
+    
+    /* margin: auto; */
+    /* transform: translate(-50%, -50%); */
+    width: 90%;
+    height: 90%;
+    background-color: red;
+    
+    /* z-index: 100; */
+}
+
+#popup img{
+    width: 100%;
+    height: 100%;
+}
+
+#clickoncross{
+    position: absolute;
+    right: 3%;
+    top: 2%;
+    font-size: 2rem;
+    background-color: #3a3a3abd;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border-radius: 50%;
+    font-family: sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#clickoncross:hover{
+    background-color: #222831;
+}
+
+/* contact container */
+.contact-container{
+    background-color: black;
+    padding: 20px 0;
+}
+
+.contact-container .main-headings{
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+    font-size: 4rem;
+}
+
+.contact-wrapper{
+    /* border: 2px solid rgb(43, 255, 0); */
+    width: 100%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    gap: 10px;
+}
+.contact-form{
+    width: 45%;
+    /* border: 2px solid rgb(43, 255, 0); */
+    font-family: sans-serif;
+    padding: 40px 20px;
+    position: relative;
+    /* border-right: 3px solid rgb(255, 255, 255); */
+    min-width: 300px;
+}
+
+.contact-wrapper label{
+    display: block;
+    color: white;
+    font-size: 2rem;
+    margin: 10px 0;
+    cursor: pointer;
+
+}
+
+.contact-wrapper select{
+    font-size: 2rem;
+    padding: 10px;
+    color: rgb(0, 0, 0);
+    outline: none;
+    cursor: pointer;
+}
+.contact-wrapper select:focus{
+    color: rgb(95, 95, 95);
+}
+.contact-form input, textarea{
+    padding: 10px;
+    font-size: 2rem;
+    resize: vertical;
+    width: 100%;
+    outline: none;
+}
+
+.contact-form input[type="submit"]{
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+    display: block;
+    transition: all 0.3s ease;
+}
+.contact-form input[type="submit"]:hover{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+.contact-form .profile-pic{
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid rgb(0, 0, 0);
+}
+
+.contact-form .profile-pic img{
+    width: 100%;
+    height: 100%;
+}
+
+.contact-details{
+    text-align: center;
+    /* border: 2px solid white; */
+    height: 100%;
+    font-size: 2rem;
+    color: white;
+    font-family: sans-serif;
+    padding: 10px;
+    align-self: flex-start;
+}
+
+.contact-details h1{
+    margin: 40px 0;
+}
+
+.contact-details img{
+    margin: 10px auto;
+    width: 100%;
+}
+
+
+@media screen and (max-width: 700px) {
+    .nav-items .nav-ul {
+        width: 100%;
+        flex-direction: column;
+        position: absolute;
+        bottom: 100%;
+        left: 0%;
+        background-color: rgb(0, 0, 0);
+        transition: all 0.3s ease;
+        opacity: 0;
+    }
+
+    .hamburger-menu {
+        display: flex;
+        position: relative;
+        z-index: 10;
+    }
+
+    .dropdown:hover .dropdown-ul {
+        left: 100%;
+        top: 0%;
+    }
+
+    .nav-items .nav-ul.showNav {
+        transition: all 0.3s ease;
+        bottom: 0;
+        opacity: 1;
+        z-index: 10;
+    }
+
+    .hero {
+        height: 70vh;
+    }
+
+    .hero video {
+        width: 400%;
+    }
+
+    .design-h2-rec{
+        font-size: 3rem;
+    }
+
+    .slider{
+        font-size: 2rem;
+    }
+
+    .image-view{
+        padding: 20px 0;
+    }
+
+    .image-view .image-container{
+        width: 100%;
+        min-width: 100px;
+    }
+
+    .records h2{
+        font-size: 3rem;
+    }
+    .records .content{
+        padding: 10px;
+    }
+
+    .records .content h2{
+        font-size: 3rem;
+        font-family :"Roboto Slab", serif;
+        margin-bottom: 20px
+    
+    }
+    
+    .records .content p{
+        font-size: 1.5rem;
+        font-family: sans-serif;
+    }
+
+    .engines .engine-containers .engine-items{
+        width: 100%;
+    }
+
+    .engines .engine-containers .engine-items .content h3{
+        font-size: 2.5rem;
+    }
+
+    .engines h1{
+        font-size: 3rem;
+    }
+
+    .contact-container .main-headings{
+        font-size: 2rem;
+    }
+
+    .contact-wrapper{
+        flex-direction: column;
+    }
+
+    .contact-form{
+        width: 100%;
+    }
+    
+}
