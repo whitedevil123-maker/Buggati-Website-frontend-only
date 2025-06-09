@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -69,26 +71,26 @@
         </div>
     </section>
     <section class="image-view">
-        <div class="image-container"><img src="./img/divo.jfif" alt="">
+        <div class="image-container" data-aos="fade-right" ><img src="./img/divo.jfif" alt="">
             <div class="content">Lorem ipsum dolor sit amet.</div>
         </div>
-        <div class="image-container"><img src="./img/divo 2020.avif" alt="">
+        <div class="image-container"  data-aos="fade-down"><img src="./img/divo 2020.avif" alt="">
             <div class="content">Lorem ipsum dolor sit amet.</div>
         </div>
-        <div class="image-container"><img src="./img/chiron.jpg" alt="">
+        <div class="image-container" data-aos="fade-left"><img src="./img/chiron.jpg" alt="">
             <div class="content">Lorem ipsum dolor sit amet.</div>
         </div>
-        <div class="image-container"><img src="./img/bugattigolden.webp" alt="">
+        <div class="image-container" data-aos="fade-right"><img src="./img/bugattigolden.webp" alt="">
             <div class="content">Lorem ipsum dolor sit amet.</div>
         </div>
-        <div class="image-container"><img src="./img/Bugatti Turbillon-28.avif" alt="">
+        <div class="image-container" data-aos="fade-left"><img src="./img/Bugatti Turbillon-28.avif" alt="">
             <div class="content">Lorem ipsum dolor sit amet.</div>
         </div>
     </section>
 
-    <section class="records">
+    <section class="records" data-aos="zoom-in" data-aos-offset="300" data-aos-duration="500">
         <video src="./img/videoplayback.mp4" autoplay muted loop>Sorry this is not supported in your browser</video>
-        <div class="content">
+        <div class="content" >
             <h2 class="design-h2-rec">Records of bugatti</h2>
             <p>Bugatti has a long history of setting and breaking speed records, particularly with its Veyron and Chiron
                 models. These records include top speed, 0-400-0 acceleration, and even open-top speed records.
@@ -99,8 +101,8 @@
 
     <section class="engines">
         <h1>Bugatti Engines</h1>
-        <div class="engine-containers">
-            <div class="engine-items">
+        <div class="engine-containers" >
+            <div class="engine-items" data-aos="fade-up">
                 <img src="./img/bugatti engines.avif" alt="">
                 <div class="img-det">click image to see full image</div>
                 <div class="content">
@@ -110,7 +112,7 @@
                         elit. Earum, quas!</p>
                 </div>
             </div>
-            <div class="engine-items">
+            <div class="engine-items" data-aos="fade-up">
                 <img src="./img/bugatti engines.jpg" alt="">
                 <div class="img-det">click image to see full image</div>
 
@@ -121,7 +123,7 @@
                         elit. Earum, quas!</p>
                 </div>
             </div>
-            <div class="engine-items">
+            <div class="engine-items" data-aos="fade-up">
                 <img src="./img/engine w16.jpg" alt="">
                 <div class="img-det">click image to see full image</div>
 
@@ -191,8 +193,46 @@
 
 
       <!-- Site footer -->
-     
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-about">
+            <h2>MyWebsite</h2>
+            <p>Making the web better, one pixel at a time.</p>
+          </div>
+      
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+      
+          <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>Email: support@example.com</p>
+            <p>Phone: +91 12345 67890</p>
+            <div class="social-icons">
+              <a href="#"><img src="./img/2023_Facebook_icon.svg.png" alt="Facebook" /></a>
+              <a href="#"><img src="./img/free-twitter-logo-icon-2429-thumb.png" alt="Twitter" /></a>
+              <a href="#"><img src="./img/Instagram_logo_2016.svg.webp" alt="Instagram" /></a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="footer-bottom">
+          <p>© 2025 MyWebsite. All rights reserved.</p>
+        </div>
+      </footer>
+      
 
+
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+        AOS.init();
+      </script>
     <script src="./app.js"></script>
 </body>
 
